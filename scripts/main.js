@@ -1,11 +1,9 @@
-import { carsRUs } from "./carsRUs.js"
+import { carsRUs } from "./carsRUs.js";
 
-
-const mainContainer = document.querySelector("#container")
+const mainContainer = document.querySelector("#container");
 
 const renderAllHTML = () => {
-    mainContainer.innerHTML = carsRUs()
-}
+  mainContainer.innerHTML = carsRUs();
+};
 
-
-renderAllHTML()
+renderAllHTML();

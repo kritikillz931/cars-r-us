@@ -1,26 +1,10 @@
-import { getInterior, getPaintColor, getTechnology, getWheels } from "./database.js";
 import { paintColor } from "./paintColor.js";
-import { interior } from "./interiorColor.js";
+import { interiorColor } from "./interiorColor.js";
 import { technology } from "./technology.js";
 import { wheel } from "./wheels.js";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export const carsRUs = () => {
-    return `
+  return `
         <h1>Cars R Us</h1>
 
         <article class="choices">
@@ -30,7 +14,7 @@ export const carsRUs = () => {
             </section>
             <section class="interior options">
                 <h2>Interior</h2>
-                ${interior()}
+                ${interiorColor()}
             </section>
             <section class="technology options">
             <h2>Technology</h2>
@@ -51,13 +35,13 @@ export const carsRUs = () => {
             <h2>Custom Detail Orders</h2>
             
             </article>
-            `
-}
-            // <section class="choices__technology options">
-            //     <h2>Technology</h2>
-            //     ${technology()}
-            // </section>
-            // <section class="choices__wheels options">
-            //     <h2>Wheels</h2>
-            //     ${wheels()}
-            //     </section>
+            `;
+};
+// <section class="choices__technology options">
+//     <h2>Technology</h2>
+//     ${technology()}
+// </section>
+// <section class="choices__wheels options">
+//     <h2>Wheels</h2>
+//     ${wheels()}
+//     </section>
