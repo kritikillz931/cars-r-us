@@ -132,3 +132,7 @@ export const setTechnology = () => {
 export const setWheels = () => {
   return [...database.wheels];
 };
+
+export const getData = () => {
+  return [...database]
+}
