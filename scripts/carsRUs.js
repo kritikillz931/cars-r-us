@@ -24,19 +24,19 @@ export const carsRUs = () => {
         <h1>Cars R Us</h1>
 
         <article class="choices">
-            <section class="choices__paintcolor options">
+            <section class="paintcolor options">
                 <h2>Paint color</h2>
                 ${paintColor()}
             </section>
-            <section class="choices__interior options">
+            <section class="interior options">
                 <h2>Interior</h2>
                 ${interior()}
             </section>
-            <section class="choices__technology options">
+            <section class="technology options">
             <h2>Technology</h2>
             ${technology()}
         </section>
-        <section class="choices__wheel options">
+        <section class="wheel options">
         <h2>Wheels</h2>
         ${wheel()}
     </section>
