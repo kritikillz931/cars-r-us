@@ -99,6 +99,19 @@ const database = {
       color: "Black",
     },
   ],
+  customOrders: [
+    {
+      id: 1,
+      paintColorId: 3,
+      interiorId: 2,
+      technologyId: 3,
+      wheelId: 1,
+      timestamp: 1614659931693,
+    },
+  ],
+  orderBuilder: {
+    
+  },
 };
 
 export const getPaintColor = () => {
@@ -117,22 +130,28 @@ export const getWheels = () => {
   return [...database.wheels];
 };
 
-export const setPaintColor = () => {
-  return [...database.paintColor];
+export const setPaintColor = (id) => {
+      database.orderBuilder.paintColorId = id
+
 };
 
-export const setInterior = () => {
-  return [...database.interior];
+export const setInterior = (id) => {
+      database.orderBuilder.interiorId = id
 };
 
-export const setTechnology = () => {
-  return [...database.technology];
+export const setTechnology = (id) => {
+      database.orderBuilder.technologyId = id
 };
 
-export const setWheels = () => {
-  return [...database.wheels];
+export const setWheels = (id) => {
+      database.orderBuilder.wheelsId = id
 };
 
 export const getData = () => {
-  return [...database]
+  return [...database];
+};
+
+export const orderBuilder = () => {
+    return orderBuilder
 }
+
