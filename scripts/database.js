@@ -113,9 +113,7 @@ const database = {
       timestamp: 1614659931693,
     },
   ],
-  orderBuilder: {
-    
-  },
+  orderBuilder: {},
 };
 
 export const getPaintColor = () => {
@@ -135,20 +133,19 @@ export const getWheels = () => {
 };
 
 export const setPaintColor = (id) => {
-      database.orderBuilder.paintColorId = id
-
+  database.orderBuilder.paintColorId = id;
 };
 
 export const setInterior = (id) => {
-      database.orderBuilder.interiorId = id
+  database.orderBuilder.interiorId = id;
 };
 
 export const setTechnology = (id) => {
-      database.orderBuilder.technologyId = id
+  database.orderBuilder.technologyId = id;
 };
 
 export const setWheels = (id) => {
-      database.orderBuilder.wheelsId = id
+  database.orderBuilder.wheelsId = id;
 };
 
 export const getData = () => {
@@ -156,8 +153,8 @@ export const getData = () => {
 };
 
 export const orderBuilder = () => {
-    return orderBuilder
-}
+  return orderBuilder;
+};
 
 export const addCustomOrder = () => {
   const newOrder = { ...database.orderBuilder };
@@ -169,5 +166,5 @@ export const addCustomOrder = () => {
 };
 
 export const getOrders = () => {
-  return [...database.customOrders]
-}
+  return [...database.customOrders];
+};

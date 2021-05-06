@@ -2,25 +2,14 @@ import { paintColor } from "./paintColor.js";
 import { interiorColor } from "./interiorColor.js";
 import { technology } from "./technology.js";
 import { wheel } from "./wheels.js";
-import { Orders } from "./order.js"
+import { Orders } from "./order.js";
 import { addCustomOrder } from "./database.js";
 
-
-
-document.addEventListener(
-    "click",
-    (event) => {
-        if (event.target.id === "orderButton") {
-            addCustomOrder()
-        }
-    }
-)
-
-
-
-
-
-
+document.addEventListener("click", (event) => {
+  if (event.target.id === "orderButton") {
+    addCustomOrder();
+  }
+});
 
 export const carsRUs = () => {
   return `
@@ -56,11 +45,3 @@ export const carsRUs = () => {
             </article>
             `;
 };
-// <section class="choices__technology options">
-//     <h2>Technology</h2>
-//     ${technology()}
-// </section>
-// <section class="choices__wheels options">
-//     <h2>Wheels</h2>
-//     ${wheels()}
-//     </section>
