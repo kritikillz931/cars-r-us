@@ -2,6 +2,25 @@ import { paintColor } from "./paintColor.js";
 import { interiorColor } from "./interiorColor.js";
 import { technology } from "./technology.js";
 import { wheel } from "./wheels.js";
+import { Orders } from "./order.js"
+import { addCustomOrder } from "./database.js";
+
+
+
+document.addEventListener(
+    "click",
+    (event) => {
+        if (event.target.id === "orderButton") {
+            addCustomOrder()
+        }
+    }
+)
+
+
+
+
+
+
 
 export const carsRUs = () => {
   return `
@@ -33,7 +52,7 @@ export const carsRUs = () => {
             
             <article class="customOrders">
             <h2>Custom Detail Orders</h2>
-            
+           ${Orders()}
             </article>
             `;
 };

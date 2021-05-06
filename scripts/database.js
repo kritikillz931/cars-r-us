@@ -79,24 +79,28 @@ const database = {
       size: 17,
       type: "Radial",
       color: "Silver",
+      price: 100,
     },
     {
       id: 2,
       size: 17,
       type: "Radial",
       color: "Black",
+      price: 100,
     },
     {
       id: 3,
       size: 18,
       type: "Spoke",
       color: "Silver",
+      price: 100,
     },
     {
       id: 4,
       size: 18,
       type: "Spoke",
       color: "Black",
+      price: 100,
     },
   ],
   customOrders: [
@@ -105,7 +109,7 @@ const database = {
       paintColorId: 3,
       interiorId: 2,
       technologyId: 3,
-      wheelId: 1,
+      wheelsId: 1,
       timestamp: 1614659931693,
     },
   ],
@@ -155,3 +159,15 @@ export const orderBuilder = () => {
     return orderBuilder
 }
 
+export const addCustomOrder = () => {
+  const newOrder = { ...database.orderBuilder };
+  newOrder.id = [...database.customOrders].pop().id + 1;
+  newOrder.timestamp = Date.now();
+  database.customOrders.push(newOrder);
+  database.orderBuilder = {};
+  document.dispatchEvent(new CustomEvent("stateChanged"));
+};
+
+export const getOrders = () => {
+  return [...database.customOrders]
+}
