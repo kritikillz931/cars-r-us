@@ -1,9 +1,11 @@
+// import
 import { paintColor } from "./paintColor.js";
 import { interiorColor } from "./interiorColor.js";
 import { technology } from "./technology.js";
 import { wheel } from "./wheels.js";
 import { Orders } from "./order.js";
 import { addCustomOrder } from "./database.js";
+import { vehicleType } from "./vehicleTypes.js";
 
 document.addEventListener("click", (event) => {
   if (event.target.id === "orderButton") {
@@ -33,7 +35,9 @@ export const carsRUs = () => {
         ${wheel()}
     </section>
             </article>
-            
+            <section class="vehicle">
+            ${vehicleType()}
+        </section>
             <article>
             <button id="orderButton">Create Custom Order</button>
             

@@ -4,12 +4,14 @@ import {
   getTechnology,
   getWheels,
   getOrders,
+  getVehicleType,
 } from "./database.js";
 
 const interiors = getInterior();
 const colors = getPaintColor();
 const technologyPackage = getTechnology();
 const wheels = getWheels();
+const vehicles = getVehicleType();
 
 export const buildOrderListItem = (order) => {
   console.log(order);
@@ -26,12 +28,21 @@ export const buildOrderListItem = (order) => {
   const foundWheels = wheels.find((wheel) => {
     return wheel.id === order.wheelsId;
   });
-  const totalCost =
+  const foundVehicleType = vehicles.find((vehicle) => {
+    return vehicle.id === order.vehicleTypeId;
+  });
+  let totalCost =
     foundInteriorColor.price +
     foundPaintColor.price +
     foundTechnology.price +
     foundWheels.price;
-
+  if (foundVehicleType.id === 1) {
+    totalCost;
+  } else if (foundVehicleType.id === 2) {
+    totalCost *= 1.5;
+  } else if (foundVehicleType.id === 3) {
+    totalCost *= 2.25;
+  }
   const costString = totalCost.toLocaleString("en-US", {
     style: "currency",
     currency: "USD",
