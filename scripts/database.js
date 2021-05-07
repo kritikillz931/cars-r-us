@@ -103,6 +103,20 @@ const database = {
       price: 100,
     },
   ],
+  vehicleTypes: [
+    {
+      id: 1,
+      type: "Car",
+    },
+    {
+      id: 2,
+      type: "SUV",
+    },
+    {
+      id: 3,
+      type: "Truck",
+    },
+  ],
   customOrders: [
     {
       id: 1,
@@ -110,12 +124,19 @@ const database = {
       interiorId: 2,
       technologyId: 3,
       wheelsId: 1,
+      vehicleTypeId: 1,
       timestamp: 1614659931693,
     },
   ],
   orderBuilder: {},
 };
+export const getVehicleType = () => {
+  return [...database.vehicleTypes];
+};
 
+export const setVehicleType = (id) => {
+  database.orderBuilder.vehicleTypeId = id;
+};
 export const getPaintColor = () => {
   return [...database.paintColor];
 };
